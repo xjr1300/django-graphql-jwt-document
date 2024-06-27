@@ -76,7 +76,7 @@ import graphql_jwt
 class Mutation(graphene.ObjectType):
     delete_token_cookie = graphql_jwt.DeleteJSONWebTokenCookie.Field()
 
-    # 長期間存続するリフレッシュトークン
+    # 長期間有効なリフレッシュトークン
     delete_refresh_token_cookie = graphql_jwt.DeleteRefreshTokenCookie.Field()
 
 
@@ -93,7 +93,7 @@ mutation {
 }
 ```
 
-- [長期間存続するリフレッシュトークン](https://django-graphql-jwt.domake.io/refresh_token.html)のための`JWT-refresh-token`クッキーを削除するために`deleteRefreshTokenCookie`を呼び出してください。
+- [長期間有効なリフレッシュトークン](https://django-graphql-jwt.domake.io/refresh_token.html)のための`JWT-refresh-token`クッキーを削除するために`deleteRefreshTokenCookie`を呼び出してください。
 
 ## 引数ごとに
 
